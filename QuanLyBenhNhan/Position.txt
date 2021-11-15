@@ -1,5 +1,3 @@
-Quản lý,8.0
-Bảo vệ,4.0
-Giám đốc,10.0
-Thư ký,8.7
-Nhân viên,6.0
+Nặng,1.0
+Nhẹ,2.0
+Trung Bình,3.0
