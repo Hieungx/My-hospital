@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuanLyNhanSuController">
+   <children>
+      <Pane prefHeight="644.0" prefWidth="271.0">
+         <children>
+            <Label layoutX="22.0" layoutY="210.0" text="ID" />
+            <Label layoutX="22.0" layoutY="245.0" text="Name" />
+            <Label layoutX="22.0" layoutY="280.0" text="Age" />
+            <Label layoutX="20.0" layoutY="420.0" text="Address" />
+            <Label layoutX="20.0" layoutY="385.0" text="Email" />
+            <Label layoutX="20.0" layoutY="350.0" text="Phone" />
+            <Label layoutX="20.0" layoutY="455.0" text="Position" />
+            <TextField fx:id="idClick" layoutX="90.0" layoutY="210.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="nameClick" layoutX="90.0" layoutY="245.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="ageClick" layoutX="90.0" layoutY="280.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="sexClick" layoutX="90.0" layoutY="315.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="phoneClick" layoutX="88.0" layoutY="350.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="emailClick" layoutX="88.0" layoutY="385.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="addressClick" layoutX="88.0" layoutY="420.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="positionClick" layoutX="88.0" layoutY="455.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="ceo_salaryClick" layoutX="88.0" layoutY="490.0" prefHeight="21.0" prefWidth="155.0" styleClass="text_input" />
+            <TextField fx:id="filterText" layoutX="19.0" layoutY="171.0" onAction="#Filter" prefHeight="30.0" prefWidth="225.0" promptText="EX: 6.0" styleClass="text_filter" />
+            <TextField fx:id="searchText" layoutX="18.0" layoutY="138.0" onAction="#Search" prefHeight="30.0" prefWidth="228.0" promptText="EX: A32239" styleClass="text_search" />
+            <Button fx:id="add" layoutX="13.0" layoutY="545.0" mnemonicParsing="false" onAction="#add" prefHeight="27.0" prefWidth="67.0" styleClass="bnt_add" text="Add" />
+            <Button fx:id="edit" layoutX="92.0" layoutY="545.0" mnemonicParsing="false" onAction="#edit" prefHeight="27.0" prefWidth="67.0" styleClass="bnt_edit" text="Edit" />
+            <Button fx:id="delete" layoutX="170.0" layoutY="545.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="67.0" styleClass="bnt_delete" text="Delete" />
+            <Label layoutX="20.0" layoutY="490.0" text="Ceo Salary" />
+            <Button fx:id="btnLogout" layoutX="161.0" layoutY="606.0" mnemonicParsing="false" onAction="#backLogin" prefHeight="26.0" prefWidth="82.0" styleClass="bnt_logout" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font name="Roboto Mono Medium for Powerline" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="112.0" fitWidth="184.0" layoutX="65.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/user.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="213.0" layoutY="140.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="bnt_search" />
+            <Button layoutX="213.0" layoutY="173.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="bnt_filter" />
+            <Label layoutX="23.0" layoutY="315.0" prefHeight="17.0" prefWidth="23.0" text="Sex" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" onMouseClicked="#handleClickTableView" prefHeight="644.0" prefWidth="843.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="68.54922485351562" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="129.92572021484375" text="Name" />
+            <TableColumn fx:id="ageColumn" prefWidth="60.9488525390625" text="Age" />
+            <TableColumn fx:id="sexColumn" prefWidth="60.9488525390625" text="Sex" />
+            <TableColumn fx:id="phoneNumberColumn" prefWidth="77.92904663085938" text="Phone" />
+            <TableColumn fx:id="emailColumn" prefWidth="97.0709228515625" text="Email" />
+            <TableColumn fx:id="addressColumn" prefWidth="127.3157958984375" text="Address" />
+            <TableColumn fx:id="positionColumn" prefWidth="104.5401611328125" text="Position" />
+            <TableColumn fx:id="ceo_salaryColumn" prefWidth="108.4598388671875" text="Ceo Salary" />
+        </columns>
+      </TableView>
+   </children>
+</HBox>

@@ -1,0 +1,209 @@
+
+
+.button_login{
+    -fx-width: fit-content;
+    -fx-text-alignment: center;
+    -fx-background-color: #007bff;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius:  12px;
+    -fx-border-color: transparent ;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-padding: 8 30 8 30;
+    -fx-font-size: 18px;
+
+}
+.input_name{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #333333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+
+}
+.input_password{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #333333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+}
+.title_table{
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.text_lable{
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
+
+}
+.text_input{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #333333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+}
+.text_input:focused{
+    -fx-border-width: 1px;
+    -fx-border-color: skyblue;
+    -fx-border-style: solid;
+}
+.text_search{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #333333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+}
+.text_filter{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #333333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+}
+.bnt_add{
+    -fx-pref-height: 35;
+    -fx-pref-width: 80;
+    -fx-text-fill: #0d6efd;
+    -fx-text-alignment: center;
+    -fx-border-color: #0d6efd ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../Image/add.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5 10;
+    -fx-background-size: 16px 16px;
+
+}
+.bnt_add:hover{
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: #fff;
+    -fx-border-color: #0d6efd ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-background-image: url("../Image/add-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5 10;
+    -fx-background-size: 16px 16px;
+
+}
+.bnt_edit{
+    -fx-pref-height: 35;
+    -fx-pref-width: 80;
+    -fx-text-alignment: center;
+    -fx-text-fill: #ff9966;
+    -fx-border-color: #ff9966 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../Image/edit.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5 10;
+    -fx-background-size: 16px 16px;
+}
+.bnt_edit:hover{
+    -fx-background-color: #ff9966;
+    -fx-text-fill: #333;
+    -fx-border-color: #ff9966 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-background-image: url("../Image/edit-black.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5 10;
+    -fx-background-size: 16px 16px;
+}
+
+.bnt_delete{
+    -fx-pref-height: 35;
+    -fx-pref-width: 80;
+    -fx-text-alignment: right;
+    -fx-text-fill: #dc3545;
+    -fx-border-color: #dc3545 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../Image/delete.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5;
+    -fx-background-size: 13px 13px;
+}
+.bnt_delete:hover{
+    -fx-background-color: #dc3545;
+    -fx-text-fill: #fff;
+    -fx-border-color: #dc3545 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-background-image: url("../Image/delete-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5;
+    -fx-background-size: 13px 13px;
+}
+
+.bnt_logout{
+    -fx-pref-height: 35;
+    -fx-pref-width: 90;
+    -fx-text-alignment: center;
+    -fx-text-fill: #333;
+    -fx-border-color: #333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+    -fx-border-radius:  5px;
+    -fx-background-color: transparent;
+
+}
+.bnt_logout:hover{
+    -fx-background-color: #333;
+    -fx-text-fill: #fff;
+    -fx-border-color: #333 ;
+    -fx-border-width: 0.5 ;
+    -fx-border-style: solid;
+}
+.bnt_search{
+
+    -fx-background-image: url("../Image/search.png");
+
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 25;
+    -fx-background-color: transparent;
+    -fx-background-position: center;
+    /*-fx-background-position: 3 3;*/
+    -fx-cursor: hand;
+
+
+}
+.bnt_filter{
+    -fx-background-image: url("../Image/filter.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 25;
+    -fx-background-color: transparent;
+    -fx-background-position: center;
+
+    /*-fx-background-position: 3 3;*/
+}
+.bnt_nav{
+    -fx-background-color: transparent;
+    -fx-pref-height: 35;
+    -fx-text-fill: #42526E;
+}
+.bnt_nav:hover{
+    -fx-background-color: #dddddd;
+    -fx-text-fill: #253858;
+}
+.bnt_branch{
+
+    -fx-effect: dropshadow(gaussian,rgba(0, 0, 0, 0.15),5,0.5,0.3,0.2);
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+}
+.bnt_branch:hover{
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+    -fx-scale-z: 1.01;
+}

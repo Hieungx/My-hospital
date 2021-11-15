@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="298.0" prefWidth="242.0">
+         <children>
+            <Button layoutX="130.0" layoutY="277.0" mnemonicParsing="false" text="Logout" />
+         </children>
+      </Pane>
+      <VBox layoutY="4.0" prefHeight="629.0" prefWidth="204.0" style="-fx-background-color: e9e9e9;">
+         <children>
+            <Pane prefHeight="242.0" prefWidth="242.0">
+               <children>
+                  <ImageView fitHeight="58.0" fitWidth="59.0" layoutX="38.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/user.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#42526e" layoutX="111.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
+                     <font>
+                        <Font name="Poppins Medium" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bfbaba" layoutX="121.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
+                     <font>
+                        <Font name="Poppins Medium" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="241.0" styleClass="bnt_nav" text="Branch">
+               <font>
+                  <Font name="Poppins ExtraBold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#ChangeScenePosition" prefHeight="27.0" prefWidth="245.0" styleClass="bnt_nav" text="Management Posotion">
+               <font>
+                  <Font name="Poppins ExtraBold" size="14.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="298.0" prefWidth="242.0">
+               <children>
+                  <Button layoutX="104.0" layoutY="267.0" mnemonicParsing="false" onAction="#backLogin" styleClass="bnt_logout" text="Logout" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label layoutX="339.0" layoutY="117.0" prefHeight="48.0" prefWidth="152.0">
+         <font>
+            <Font name="Poppins Medium" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="250.0" layoutY="163.0" mnemonicParsing="false" onAction="#BranchA" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch A" textFill="#42526e">
+         <font>
+            <Font name="Poppins Medium" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="510.0" layoutY="163.0" mnemonicParsing="false" onAction="#BranchB" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch B" textFill="#42526e">
+         <font>
+            <Font name="Poppins Medium" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="770.0" layoutY="163.0" mnemonicParsing="false" onAction="#BranchC" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch C" textFill="#42526e">
+         <font>
+            <Font name="Poppins Medium" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="250.0" layoutY="356.0" mnemonicParsing="false" onAction="#BranchD" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch D" textFill="#42526e">
+         <font>
+            <Font name="Poppins Medium" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="510.0" layoutY="356.0" mnemonicParsing="false" onAction="#BranchE" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch E" textFill="#42526e">
+         <font>
+            <Font name="Poppins Medium" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="770.0" layoutY="356.0" mnemonicParsing="false" onAction="#BranchF" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch F" textFill="#42526e">
+         <font>
+            <Font name="Poppins Medium" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="221.0" layoutY="51.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #42526E;" text="Branch">
+         <font>
+            <Font name="Poppins Medium" size="45.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

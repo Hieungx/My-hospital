@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManagementPositionController">
+   <children>
+      <TextField fx:id="idPosition" layoutX="85.0" layoutY="70.0" prefHeight="35.0" prefWidth="152.0" styleClass="text_input" />
+      <TextField fx:id="idCeo_Salary" layoutX="325.0" layoutY="70.0" prefHeight="35.0" prefWidth="90.0" styleClass="text_input" />
+      <Button layoutX="435.0" layoutY="70.0" mnemonicParsing="false" onAction="#add" prefWidth="54.0" styleClass="bnt_add" text="Add" />
+      <Button layoutX="520.0" layoutY="71.0" mnemonicParsing="false" onAction="#edit" prefWidth="54.0" styleClass="bnt_edit" text="Edit" />
+      <Button layoutX="607.0" layoutY="70.0" mnemonicParsing="false" onAction="#delete" prefWidth="54.0" styleClass="bnt_delete" text="Delete" />
+      <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#backHome" style="-fx-background-color: transparent;" text="Management Position">
+         <font>
+            <Font name="Poppins Medium" size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutY="126.0" onMouseClicked="#handleClickTableView" prefHeight="402.0" prefWidth="702.0">
+        <columns>
+          <TableColumn fx:id="positionColumn" prefWidth="371.14582020044327" text="Position" />
+          <TableColumn fx:id="ceo_salaryColumn" prefWidth="358.85418701171875" text="Ceo Salary" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="75.0" text="Position">
+         <font>
+            <Font name="Poppins Medium" size="13.0" />
+         </font></Label>
+      <Label layoutX="247.0" layoutY="76.0" text="Ceo Salary">
+         <font>
+            <Font name="Poppins Medium" size="13.0" />
+         </font></Label>
+   </children>
+</Pane>

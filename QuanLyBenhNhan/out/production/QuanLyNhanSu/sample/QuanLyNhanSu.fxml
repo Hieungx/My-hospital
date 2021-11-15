@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuanLyNhanSuController">
+   <children>
+      <Pane prefHeight="730.0" prefWidth="349.0">
+         <children>
+            <Label layoutX="22.0" layoutY="222.0" styleClass="text_lable" text="ID">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <Label layoutX="22.0" layoutY="257.0" text="Name">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <Label layoutX="22.0" layoutY="292.0" text="Age">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="432.0" text="Address">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="397.0" text="Email">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="362.0" text="Phone">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="467.0" text="Position">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <TextField fx:id="idClick" layoutX="110.0" layoutY="222.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="nameClick" layoutX="110.0" layoutY="257.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="ageClick" layoutX="110.0" layoutY="292.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="sexClick" layoutX="110.0" layoutY="327.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="phoneClick" layoutX="110.0" layoutY="362.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="emailClick" layoutX="110.0" layoutY="397.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="addressClick" layoutX="110.0" layoutY="432.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <ComboBox fx:id="positionClick" layoutX="110.0" layoutY="467.0" onAction="#setTextSalary" prefHeight="31.0" prefWidth="187.0" />
+            <TextField fx:id="ceo_salaryClick" layoutX="110.0" layoutY="502.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
+            <TextField fx:id="filterText" layoutX="19.0" layoutY="171.0" onAction="#Filter" onMouseClicked="#handleClickFilter" prefHeight="30.0" prefWidth="278.0" promptText="EX: 6.0">
+               <styleClass>
+                  <String fx:value="text_filter" />
+                  <String fx:value="text_input" />
+               </styleClass>
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font></TextField>
+            <TextField fx:id="searchText" layoutX="18.0" layoutY="138.0" onAction="#Search" onMouseClicked="#handleClickSearch" prefHeight="30.0" prefWidth="278.0" promptText="EX: A32239">
+               <styleClass>
+                  <String fx:value="text_search" />
+                  <String fx:value="text_input" />
+               </styleClass>
+               <font>
+                  <Font name="Poppins Medium" size="13.0" />
+               </font></TextField>
+            <Button fx:id="add" layoutX="13.0" layoutY="562.0" mnemonicParsing="false" onAction="#add" prefHeight="27.0" prefWidth="67.0" styleClass="bnt_add" text="Add">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Button>
+            <Button fx:id="edit" layoutX="124.0" layoutY="562.0" mnemonicParsing="false" onAction="#edit" prefHeight="27.0" prefWidth="67.0" styleClass="bnt_edit" text="Edit">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Button>
+            <Button fx:id="delete" layoutX="229.0" layoutY="562.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="67.0" styleClass="bnt_delete" text="Delete">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Button>
+            <Label layoutX="20.0" layoutY="502.0" text="Ceo Salary">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <ImageView fitHeight="112.0" fitWidth="184.0" layoutX="101.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="23.0" layoutY="327.0" prefHeight="20.0" prefWidth="40.0" text="Sex">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font></Label>
+            <FontAwesomeIcon fill="#e4e1e1" glyphName="SEARCH" layoutX="268.0" layoutY="159.0" size="1.5em" />
+            <FontAwesomeIcon fill="#e4e1e1" glyphName="FILTER" layoutX="271.0" layoutY="194.0" size="1.5em" text="" />
+         </children>
+      </Pane>
+      <Pane prefHeight="678.0" prefWidth="1043.0">
+         <children>
+            <TableView fx:id="table" layoutX="2.0" layoutY="103.0" onMouseClicked="#handleClickTableView" prefHeight="575.0" prefWidth="1028.0" styleClass="table_view">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="75.0" style="-fx-font-family: Poppin SemiBild;" text="ID" />
+                  <TableColumn fx:id="nameColumn" prefWidth="110.25775146484375" text="Name" />
+                  <TableColumn fx:id="ageColumn" prefWidth="68.74215698242188" text="Age" />
+                  <TableColumn fx:id="sexColumn" prefWidth="75.01214599609375" text="Sex" />
+                  <TableColumn fx:id="phoneNumberColumn" prefWidth="82.484375" text="Phone" />
+                  <TableColumn fx:id="emailColumn" prefWidth="253.650634765625" text="Email" />
+                  <TableColumn fx:id="addressColumn" prefWidth="146.9205322265625" text="Address" />
+                  <TableColumn fx:id="positionColumn" prefWidth="121.07958984375" text="Position" />
+                  <TableColumn fx:id="ceo_salaryColumn" prefWidth="90.0" text="Ceo Salary" />
+               </columns>
+            </TableView>
+            <Button fx:id="bntHome" layoutX="28.0" layoutY="9.0" mnemonicParsing="false" onAction="#backHome" style="-fx-background-color: transparent; -fx-cursor: hand;" text="List Employee">
+               <font>
+                  <Font name="Poppins Medium" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</HBox>
