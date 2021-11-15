@@ -381,7 +381,7 @@ public class QuanLyBenhNhanController implements Initializable {
 
         List<Config> inputPositions = null;
         try {
-            inputPositions = readPositions("Position.txt");
+            inputPositions = readPositions("Config.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -393,7 +393,7 @@ public class QuanLyBenhNhanController implements Initializable {
         /*Paths.get(filename)*/
         //BufferedReader reader = Files.newBufferedReader(new InputStreamReader());
         String line;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Position.txt")));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Config.txt")));
         while ((line = reader.readLine()) != null) {
             String[] names = line.split(",");
             Positions.add(new Config(names[0], Double.parseDouble(names[1])));

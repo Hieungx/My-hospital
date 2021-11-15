@@ -1,3 +1,4 @@
 Nặng,1.0
 Nhẹ,2.0
 Trung Bình,3.0
+Ngoại Trú,4.0
