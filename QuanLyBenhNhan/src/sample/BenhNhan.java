@@ -2,7 +2,7 @@ package sample;
 
 import java.io.Serializable;
 
-public class NhanVien  extends ChucVu implements Serializable {
+public class BenhNhan  extends Config implements Serializable {
     private String Branch;
     private String ID;
     private String Name;
@@ -11,10 +11,10 @@ public class NhanVien  extends ChucVu implements Serializable {
     private String Address;
     private String PhoneNumber;
     private String Gmail;
-    public NhanVien(){
+    public BenhNhan(){
 
     };
-    public NhanVien(String branch,String id, String name, String age,String sex, String phoneNumber,String gmail,String address, String position,Double ceo_Salary) {
+    public BenhNhan(String branch,String id, String name, String age,String sex, String phoneNumber,String gmail,String address, String position,Double ceo_Salary) {
         super(position,ceo_Salary);
         Branch = branch;
         ID = id;

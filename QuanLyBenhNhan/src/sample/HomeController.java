@@ -36,21 +36,21 @@ public class HomeController{
     public void ChangeSceneManagement(ActionEvent e) throws Exception{
         Stage stage =(Stage)((Node) e.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("QuanLyNhanSu.fxml"));
+        loader.setLocation(getClass().getResource("QuanLyBenhNhan.fxml"));
         Parent QuanLyNhanSuView = loader.load();
         /*QuanLyNhanSuController controller = loader.getController();
         controller.getBranchForm("A301");*/
         Scene scene = new Scene(QuanLyNhanSuView);
-        stage.setTitle("ManagementEmployee");
+        stage.setTitle("MANAGEMENT");
         scene.getStylesheets().add(getClass().getResource("./Style/style.css").toExternalForm());
         stage.setScene(scene);
     }
     public void ChangeScenePosition(ActionEvent e) throws Exception{
         Stage stage =(Stage)((Node) e.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("QuanLyChucVu.fxml"));
+        loader.setLocation(getClass().getResource("Config.fxml"));
         Parent PositionView = loader.load();
-        stage.setTitle("ManagementPosition");
+        stage.setTitle("CONFIG");
         /*QuanLyNhanSuController controller = loader.getController();
         controller.getBranchForm("A301");*/
         Scene scene = new Scene(PositionView);

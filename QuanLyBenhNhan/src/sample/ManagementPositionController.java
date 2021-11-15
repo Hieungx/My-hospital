@@ -27,37 +27,37 @@ import static sample.HomeController.getData;
 
 public class ManagementPositionController implements Initializable {
     @FXML
-    private ObservableList<ChucVu> PositionList;
+    private ObservableList<Config> PositionList;
     @FXML
     private TextField idPosition;
     @FXML
     private TextField idCeo_Salary;
     @FXML
-    private TableColumn<ChucVu,String> positionColumn;
+    private TableColumn<Config,String> positionColumn;
     @FXML
-    private TableColumn<ChucVu,Double> ceo_salaryColumn;
+    private TableColumn<Config,Double> ceo_salaryColumn;
     @FXML
-    private TableView<ChucVu> table;
+    private TableView<Config> table;
     @FXML
-    private ObservableList<NhanVien> nhanvienListAll;
+    private ObservableList<BenhNhan> nhanvienListAll;
     @FXML
-    private ObservableList<NhanVien> nhanvienListCopy;
+    private ObservableList<BenhNhan> nhanvienListCopy;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         PositionList = FXCollections.observableArrayList();
         nhanvienListAll = FXCollections.observableArrayList();
         if(readData()!=null){
-            for(NhanVien nhanvien : readData()){
+            for(BenhNhan nhanvien : readData()){
                 nhanvienListAll.add(nhanvien);
             }
         }
         if(readDataPos()!=null){
-            for(ChucVu chucvu : readDataPos()){
+            for(Config chucvu : readDataPos()){
                 PositionList.add(chucvu);
             }
         }
-        positionColumn.setCellValueFactory(new PropertyValueFactory<ChucVu, String>("Position"));
-        ceo_salaryColumn.setCellValueFactory(new PropertyValueFactory<ChucVu, Double>("Coe_Salary"));
+        positionColumn.setCellValueFactory(new PropertyValueFactory<Config, String>("Position"));
+        ceo_salaryColumn.setCellValueFactory(new PropertyValueFactory<Config, Double>("Coe_Salary"));
         table.setItems(PositionList);
     }
 
@@ -68,7 +68,7 @@ public class ManagementPositionController implements Initializable {
 
     @FXML
     private void handleClickTableView(MouseEvent click) {
-        ChucVu chucvu = table.getSelectionModel().getSelectedItem();
+        Config chucvu = table.getSelectionModel().getSelectedItem();
         if (chucvu!= null) {
             idPosition.setText(chucvu.getPosition());
             idCeo_Salary.setText(String.valueOf(chucvu.getCoe_Salary()));
@@ -87,7 +87,7 @@ public class ManagementPositionController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes,buttonTypeNo,buttonTypeCancel);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get()==buttonTypeYes) {
-            ChucVu newChucvu = new ChucVu();
+            Config newChucvu = new Config();
             newChucvu.setPosition(idPosition.getText());
             newChucvu.setCoe_Salary(Double.parseDouble(idCeo_Salary.getText()));
             PositionList.add(newChucvu);
@@ -111,16 +111,16 @@ public class ManagementPositionController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes,buttonTypeNo,buttonTypeCancel);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get()==buttonTypeYes) {
-            ChucVu selected = table.getSelectionModel().getSelectedItem();
-            ChucVu newchucvu = new ChucVu();
-            for(ChucVu chucvu : PositionList){
+            Config selected = table.getSelectionModel().getSelectedItem();
+            Config newchucvu = new Config();
+            for(Config chucvu : PositionList){
                 if(chucvu==selected){
                     newchucvu.setCoe_Salary(Double.parseDouble(idCeo_Salary.getText()));
                     newchucvu.setPosition(idPosition.getText());
                     PositionList.set(PositionList.indexOf(chucvu),newchucvu);
-                    for(NhanVien nhanvien : nhanvienListAll){
+                    for(BenhNhan nhanvien : nhanvienListAll){
                         if(nhanvien.getPosition().contains(chucvu.getPosition())){
-                            NhanVien newnhanvien = new NhanVien();
+                            BenhNhan newnhanvien = new BenhNhan();
                             newnhanvien.setBranch(nhanvien.getBranch());
                             newnhanvien.setID(nhanvien.getID());
                             newnhanvien.setName(nhanvien.getName());
@@ -157,10 +157,10 @@ public class ManagementPositionController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes,buttonTypeNo,buttonTypeCancel);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get()==buttonTypeYes) {
-            ChucVu selected = table.getSelectionModel().getSelectedItem();
-            for(NhanVien nhanvien : nhanvienListAll){
+            Config selected = table.getSelectionModel().getSelectedItem();
+            for(BenhNhan nhanvien : nhanvienListAll){
                 if(nhanvien.getPosition().contains(selected.getPosition())){
-                    NhanVien newnhanvien = new NhanVien();
+                    BenhNhan newnhanvien = new BenhNhan();
                     newnhanvien.setBranch(nhanvien.getBranch());
                     newnhanvien.setID(nhanvien.getID());
                     newnhanvien.setName(nhanvien.getName());
@@ -213,9 +213,9 @@ public class ManagementPositionController implements Initializable {
             e.printStackTrace();
         }
     }
-    public List<ChucVu> readDataPos() {
+    public List<Config> readDataPos() {
 
-        List<ChucVu> inputPositions = null;
+        List<Config> inputPositions = null;
         try {
             inputPositions = readPositions("Position.txt");
         } catch (IOException e) {
@@ -235,25 +235,25 @@ public class ManagementPositionController implements Initializable {
             System.out.println("Error IO file");
         }*/
     }
-    private static void writeToTextFilePos(String filename, ObservableList<ChucVu> positions)
+    private static void writeToTextFilePos(String filename, ObservableList<Config> positions)
             throws IOException {
 
         FileWriter writer = new FileWriter(filename);
-        for (ChucVu position : positions) {
+        for (Config position : positions) {
             writer.write(position.getPosition()+ "," +position.getCoe_Salary() +"\n");
         }
         writer.close();
     }
-    private static List<ChucVu> readPositions(String filename)
+    private static List<Config> readPositions(String filename)
             throws IOException {
-        List<ChucVu> Positions = new ArrayList<>();
+        List<Config> Positions = new ArrayList<>();
         /*Paths.get(filename)*/
         //BufferedReader reader = Files.newBufferedReader(new InputStreamReader());
         String line;
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Position.txt")));
         while ((line = reader.readLine()) != null) {
             String[] names = line.split(",");
-            Positions.add(new ChucVu(names[0], Double.parseDouble(names[1])));
+            Positions.add(new Config(names[0], Double.parseDouble(names[1])));
         }
         return Positions;
     }
@@ -273,9 +273,9 @@ public class ManagementPositionController implements Initializable {
             e.printStackTrace();
         }
     }
-    public List<NhanVien> readData() {
+    public List<BenhNhan> readData() {
 
-        List<NhanVien> inputNhanviens = null;
+        List<BenhNhan> inputNhanviens = null;
         try {
             inputNhanviens = readNhanviens("data.txt");
         } catch (IOException e) {
@@ -295,25 +295,25 @@ public class ManagementPositionController implements Initializable {
             System.out.println("Error IO file");
         }*/
     }
-    private static void writeToTextFile(String filename, ObservableList<NhanVien> nhanViens)
+    private static void writeToTextFile(String filename, ObservableList<BenhNhan> nhanViens)
             throws IOException {
 
         FileWriter writer = new FileWriter(filename);
-        for (NhanVien nhanvien : nhanViens) {
+        for (BenhNhan nhanvien : nhanViens) {
             writer.write(nhanvien.getBranch()+ "," +nhanvien.getID() + "," + nhanvien.getName() + "," + nhanvien.getAge()+","+nhanvien.getSex() + "," + nhanvien.getPhoneNumber() + "," + nhanvien.getGmail()+","+nhanvien.getAddress() + "," + nhanvien.getPosition()+","+nhanvien.getCoe_Salary() + "\n");
         }
         writer.close();
     }
-    private static List<NhanVien> readNhanviens(String filename)
+    private static List<BenhNhan> readNhanviens(String filename)
             throws IOException {
-        List<NhanVien> nhanViens = new ArrayList<>();
+        List<BenhNhan> nhanViens = new ArrayList<>();
         /*Paths.get(filename)*/
         //BufferedReader reader = Files.newBufferedReader(new InputStreamReader());
         String line;
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("data.txt")));
         while ((line = reader.readLine()) != null) {
             String[] names = line.split(",");
-            nhanViens.add(new NhanVien(names[0], names[1],names[2],names[3], names[4],names[5],names[6], names[7], names[8],Double.parseDouble(names[9])));
+            nhanViens.add(new BenhNhan(names[0], names[1],names[2],names[3], names[4],names[5],names[6], names[7], names[8],Double.parseDouble(names[9])));
             //System.out.println("******"+" "+names[0]+" "+ names[1]+" "+names[2]+" "+names[3]+" "+ names[4]+" "+names[5]+" "+names[6]+" "+ names[7]+" "+names[8]);
         }
         return nhanViens;

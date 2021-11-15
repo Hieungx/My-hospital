@@ -2,13 +2,13 @@ package sample;
 
 import java.util.function.DoubleUnaryOperator;
 
-public class ChucVu {
+public class Config {
     private String Pos;
     private Double Coe_Salary;
-    public ChucVu(){
+    public Config(){
 
     }
-    public ChucVu(String position,Double coe_Salary) {
+    public Config(String position,Double coe_Salary) {
         Coe_Salary = coe_Salary;
         Pos = position;
     }

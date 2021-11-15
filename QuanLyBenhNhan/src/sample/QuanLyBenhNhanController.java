@@ -34,27 +34,27 @@ import java.util.logging.Logger;
 
 import static sample.HomeController.getData;
 
-public class QuanLyNhanSuController implements Initializable {
+public class QuanLyBenhNhanController implements Initializable {
     @FXML
-    private TableView<NhanVien> table;
+    private TableView<BenhNhan> table;
     @FXML
-    private TableColumn<NhanVien,String> idColumn;
+    private TableColumn<BenhNhan,String> idColumn;
     @FXML
-    private TableColumn<NhanVien,String> nameColumn;
+    private TableColumn<BenhNhan,String> nameColumn;
     @FXML
-    private TableColumn<NhanVien,String> ageColumn;
+    private TableColumn<BenhNhan,String> ageColumn;
     @FXML
-    private TableColumn<NhanVien,String> sexColumn;
+    private TableColumn<BenhNhan,String> sexColumn;
     @FXML
-    private TableColumn<NhanVien,String> addressColumn;
+    private TableColumn<BenhNhan,String> addressColumn;
     @FXML
-    private TableColumn<NhanVien,String> phoneNumberColumn;
+    private TableColumn<BenhNhan,String> phoneNumberColumn;
     @FXML
-    private TableColumn<NhanVien,String> emailColumn;
+    private TableColumn<BenhNhan,String> emailColumn;
     @FXML
-    private TableColumn<NhanVien,String> positionColumn;
+    private TableColumn<BenhNhan,String> positionColumn;
     @FXML
-    private TableColumn<NhanVien,String> ceo_salaryColumn;
+    private TableColumn<BenhNhan,String> ceo_salaryColumn;
     @FXML
     private TextField idClick;
     @FXML
@@ -78,11 +78,11 @@ public class QuanLyNhanSuController implements Initializable {
     @FXML
     private TextField filterText;
     @FXML
-    private ObservableList<NhanVien> nhanvienList;
+    private ObservableList<BenhNhan> nhanvienList;
     @FXML
-    private ObservableList<ChucVu> PositionList;
+    private ObservableList<Config> PositionList;
     @FXML
-    private ObservableList<NhanVien> nhanvienListAll;
+    private ObservableList<BenhNhan> nhanvienListAll;
     @FXML
     private ObservableMap<String,Double> Salary;
     @Override
@@ -90,7 +90,7 @@ public class QuanLyNhanSuController implements Initializable {
         ObservableList<String> pos = FXCollections.observableArrayList();
         Salary = FXCollections.observableHashMap();
         PositionList = FXCollections.observableArrayList();
-        for(ChucVu chucvu : readDataPos()){
+        for(Config chucvu : readDataPos()){
             PositionList.add(chucvu);
             pos.add(chucvu.getPosition());
             Salary.put(chucvu.getPosition(), chucvu.getCoe_Salary());
@@ -99,22 +99,22 @@ public class QuanLyNhanSuController implements Initializable {
         nhanvienList = FXCollections.observableArrayList();
         nhanvienListAll = FXCollections.observableArrayList();
         if(readData()!=null){
-            for(NhanVien nhanvien : readData()){
+            for(BenhNhan nhanvien : readData()){
                 nhanvienListAll.add(nhanvien);
                 if(nhanvien.getBranch().contains(getData())){
                     nhanvienList.add(nhanvien);
                 }
             }
         }
-        idColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("ID"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("Name"));
-        ageColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("Age"));
-        sexColumn.setCellValueFactory(new PropertyValueFactory<NhanVien,String>("Sex"));
-        addressColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("Address"));
-        phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("PhoneNumber"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("Gmail"));
-        positionColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("Position"));
-        ceo_salaryColumn.setCellValueFactory(new PropertyValueFactory<NhanVien, String>("Coe_Salary"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("ID"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("Name"));
+        ageColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("Age"));
+        sexColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan,String>("Sex"));
+        addressColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("Address"));
+        phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("PhoneNumber"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("Gmail"));
+        positionColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("Position"));
+        ceo_salaryColumn.setCellValueFactory(new PropertyValueFactory<BenhNhan, String>("Coe_Salary"));
         table.setItems(nhanvienList);
 
     }
@@ -137,7 +137,7 @@ public class QuanLyNhanSuController implements Initializable {
 
     @FXML
     private void handleClickTableView(MouseEvent click) {
-        NhanVien nhanvien = table.getSelectionModel().getSelectedItem();
+        BenhNhan nhanvien = table.getSelectionModel().getSelectedItem();
         if (nhanvien!= null) {
             idClick.setText(nhanvien.getID());
             nameClick.setText(nhanvien.getName());
@@ -172,7 +172,7 @@ public class QuanLyNhanSuController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes,buttonTypeNo,buttonTypeCancel);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get()==buttonTypeYes) {
-            NhanVien newNhanvien = new NhanVien();
+            BenhNhan newNhanvien = new BenhNhan();
             newNhanvien.setBranch(getData());
             newNhanvien.setID(idClick.getText());
             newNhanvien.setName(nameClick.getText());
@@ -205,9 +205,9 @@ public class QuanLyNhanSuController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes,buttonTypeNo,buttonTypeCancel);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get()==buttonTypeYes) {
-            NhanVien selected = table.getSelectionModel().getSelectedItem();
-            NhanVien newnhanvien = new NhanVien();
-            for(NhanVien nhanvien : nhanvienList){
+            BenhNhan selected = table.getSelectionModel().getSelectedItem();
+            BenhNhan newnhanvien = new BenhNhan();
+            for(BenhNhan nhanvien : nhanvienList){
                 if(nhanvien==selected){
                     newnhanvien.setBranch(getData());
                     newnhanvien.setID(idClick.getText());
@@ -220,7 +220,7 @@ public class QuanLyNhanSuController implements Initializable {
                     newnhanvien.setPosition(String.valueOf(positionClick.getValue()));
                     newnhanvien.setCoe_Salary(Double.parseDouble(ceo_salaryClick.getText()));
                     nhanvienList.set(nhanvienList.indexOf(nhanvien),newnhanvien);
-                    for(NhanVien nhanvien1 : nhanvienListAll){
+                    for(BenhNhan nhanvien1 : nhanvienListAll){
                         if(nhanvien1==selected){
                             nhanvienListAll.set(nhanvienListAll.indexOf(nhanvien1),newnhanvien);
                         }
@@ -249,7 +249,7 @@ public class QuanLyNhanSuController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes,buttonTypeNo,buttonTypeCancel);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get()==buttonTypeYes) {
-            NhanVien selected = table.getSelectionModel().getSelectedItem();
+            BenhNhan selected = table.getSelectionModel().getSelectedItem();
             nhanvienList.remove(selected);
             nhanvienListAll.remove(selected);
             setNull();
@@ -273,7 +273,7 @@ public class QuanLyNhanSuController implements Initializable {
         saveData();
     }
     public void Search(){
-        FilteredList<NhanVien> filteredData = new FilteredList<>(nhanvienList, p -> true);
+        FilteredList<BenhNhan> filteredData = new FilteredList<>(nhanvienList, p -> true);
         searchText.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(NhanVien -> {
                 if (newValue == null || newValue.isEmpty()) {
@@ -294,12 +294,12 @@ public class QuanLyNhanSuController implements Initializable {
                 return false;
             });
         });
-        SortedList<NhanVien> sortedData = new SortedList<>(filteredData);
+        SortedList<BenhNhan> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(table.comparatorProperty());
         table.setItems(sortedData);
     }
     public void Filter(){
-        FilteredList<NhanVien> filteredData1 = new FilteredList<>(nhanvienList, p -> true);
+        FilteredList<BenhNhan> filteredData1 = new FilteredList<>(nhanvienList, p -> true);
         filterText.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData1.setPredicate(NhanVien -> {
                 if (newValue == null || newValue.isEmpty()) {
@@ -312,7 +312,7 @@ public class QuanLyNhanSuController implements Initializable {
                 return false;
             });
         });
-        SortedList<NhanVien> sortedData1 = new SortedList<>(filteredData1);
+        SortedList<BenhNhan> sortedData1 = new SortedList<>(filteredData1);
         sortedData1.comparatorProperty().bind(table.comparatorProperty());
         table.setItems(sortedData1);
     }
@@ -332,9 +332,9 @@ public class QuanLyNhanSuController implements Initializable {
             e.printStackTrace();
         }
     }
-    public List<NhanVien> readData() {
+    public List<BenhNhan> readData() {
 
-        List<NhanVien> inputNhanviens = null;
+        List<BenhNhan> inputNhanviens = null;
         try {
             inputNhanviens = readNhanviens("data.txt");
         } catch (IOException e) {
@@ -354,32 +354,32 @@ public class QuanLyNhanSuController implements Initializable {
             System.out.println("Error IO file");
         }*/
     }
-    private static void writeToTextFile(String filename, ObservableList<NhanVien> nhanViens)
+    private static void writeToTextFile(String filename, ObservableList<BenhNhan> nhanViens)
             throws IOException {
 
         FileWriter writer = new FileWriter(filename);
-        for (NhanVien nhanvien : nhanViens) {
+        for (BenhNhan nhanvien : nhanViens) {
             writer.write(nhanvien.getBranch()+ "," +nhanvien.getID() + "," + nhanvien.getName() + "," + nhanvien.getAge()+","+nhanvien.getSex() + "," + nhanvien.getPhoneNumber() + "," + nhanvien.getGmail()+","+nhanvien.getAddress() + "," + nhanvien.getPosition()+","+nhanvien.getCoe_Salary() + "\n");
         }
         writer.close();
     }
-    private static List<NhanVien> readNhanviens(String filename)
+    private static List<BenhNhan> readNhanviens(String filename)
             throws IOException {
-        List<NhanVien> nhanViens = new ArrayList<>();
+        List<BenhNhan> nhanViens = new ArrayList<>();
         /*Paths.get(filename)*/
         //BufferedReader reader = Files.newBufferedReader(new InputStreamReader());
         String line;
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("data.txt")));
         while ((line = reader.readLine()) != null) {
             String[] names = line.split(",");
-            nhanViens.add(new NhanVien(names[0], names[1],names[2],names[3], names[4],names[5],names[6], names[7], names[8],Double.parseDouble(names[9])));
+            nhanViens.add(new BenhNhan(names[0], names[1],names[2],names[3], names[4],names[5],names[6], names[7], names[8],Double.parseDouble(names[9])));
             //System.out.println("******"+" "+names[0]+" "+ names[1]+" "+names[2]+" "+names[3]+" "+ names[4]+" "+names[5]+" "+names[6]+" "+ names[7]+" "+names[8]);
         }
         return nhanViens;
     }
-    public List<ChucVu> readDataPos() {
+    public List<Config> readDataPos() {
 
-        List<ChucVu> inputPositions = null;
+        List<Config> inputPositions = null;
         try {
             inputPositions = readPositions("Position.txt");
         } catch (IOException e) {
@@ -387,16 +387,16 @@ public class QuanLyNhanSuController implements Initializable {
         }
         return inputPositions;
     }
-    private static List<ChucVu> readPositions(String filename)
+    private static List<Config> readPositions(String filename)
             throws IOException {
-        List<ChucVu> Positions = new ArrayList<>();
+        List<Config> Positions = new ArrayList<>();
         /*Paths.get(filename)*/
         //BufferedReader reader = Files.newBufferedReader(new InputStreamReader());
         String line;
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Position.txt")));
         while ((line = reader.readLine()) != null) {
             String[] names = line.split(",");
-            Positions.add(new ChucVu(names[0], Double.parseDouble(names[1])));
+            Positions.add(new Config(names[0], Double.parseDouble(names[1])));
         }
         return Positions;
     }
