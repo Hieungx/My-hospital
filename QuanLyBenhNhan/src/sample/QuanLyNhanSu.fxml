@@ -106,11 +106,11 @@
                   <TableColumn fx:id="phoneNumberColumn" prefWidth="82.484375" text="Phone" />
                   <TableColumn fx:id="emailColumn" prefWidth="253.650634765625" text="Email" />
                   <TableColumn fx:id="addressColumn" prefWidth="146.9205322265625" text="Address" />
-                  <TableColumn fx:id="positionColumn" prefWidth="121.07958984375" text="Position" />
-                  <TableColumn fx:id="ceo_salaryColumn" prefWidth="90.0" text="Ceo Salary" />
+                  <TableColumn fx:id="positionColumn" prefWidth="121.07958984375" text="Type" />
+                  <TableColumn fx:id="ceo_salaryColumn" prefWidth="90.0" text="Code" />
                </columns>
             </TableView>
-            <Button fx:id="bntHome" layoutX="28.0" layoutY="9.0" mnemonicParsing="false" onAction="#backHome" style="-fx-background-color: transparent; -fx-cursor: hand;" text="List Employee">
+            <Button fx:id="bntHome" layoutX="28.0" layoutY="9.0" mnemonicParsing="false" onAction="#backHome" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Danh Sách Bệnh Nhân">
                <font>
                   <Font name="Poppins Medium" size="36.0" />
                </font>

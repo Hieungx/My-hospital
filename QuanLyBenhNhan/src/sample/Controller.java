@@ -23,11 +23,11 @@ public class Controller {
     @FXML
     private Label Wrong;
     @FXML
-    private String usernameCons = "admin";
+    private String usernameCons = "nthieu";
     @FXML
     private Button btnLogin;
     @FXML
-    private String passwordCons = "admin";
+    private String passwordCons = "nthieu";
 
     @FXML
     public void ChangeSceneHome(ActionEvent e) throws Exception{
