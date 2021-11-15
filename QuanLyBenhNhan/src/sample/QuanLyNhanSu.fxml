@@ -37,7 +37,7 @@
                <font>
                   <Font name="Poppins SemiBold" size="14.0" />
                </font></Label>
-            <Label layoutX="20.0" layoutY="467.0" text="Position">
+            <Label layoutX="20.0" layoutY="467.0" text="Type">
                <font>
                   <Font name="Poppins SemiBold" size="14.0" />
                </font></Label>
@@ -50,15 +50,15 @@
             <TextField fx:id="addressClick" layoutX="110.0" layoutY="432.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
             <ComboBox fx:id="positionClick" layoutX="110.0" layoutY="467.0" onAction="#setTextSalary" prefHeight="31.0" prefWidth="187.0" />
             <TextField fx:id="ceo_salaryClick" layoutX="110.0" layoutY="502.0" prefHeight="31.0" prefWidth="187.0" styleClass="text_input" />
-            <TextField fx:id="filterText" layoutX="19.0" layoutY="171.0" onAction="#Filter" onMouseClicked="#handleClickFilter" prefHeight="30.0" prefWidth="278.0" promptText="EX: 6.0">
-               <styleClass>
-                  <String fx:value="text_filter" />
-                  <String fx:value="text_input" />
-               </styleClass>
-               <font>
-                  <Font name="Poppins Medium" size="13.0" />
-               </font></TextField>
-            <TextField fx:id="searchText" layoutX="18.0" layoutY="138.0" onAction="#Search" onMouseClicked="#handleClickSearch" prefHeight="30.0" prefWidth="278.0" promptText="EX: A32239">
+<!--            <TextField fx:id="filterText" layoutX="19.0" layoutY="171.0" onAction="#Filter" onMouseClicked="#handleClickFilter" prefHeight="30.0" prefWidth="278.0" promptText="EX: 1.0">-->
+<!--               <styleClass>-->
+<!--                  <String fx:value="text_filter" />-->
+<!--                  <String fx:value="text_input" />-->
+<!--               </styleClass>-->
+<!--               <font>-->
+<!--                  <Font name="Poppins Medium" size="13.0" />-->
+<!--               </font></TextField>-->
+            <TextField fx:id="searchText" layoutX="18.0" layoutY="138.0" onAction="#Search" onMouseClicked="#handleClickSearch" prefHeight="30.0" prefWidth="278.0" promptText="EX: BN0000">
                <styleClass>
                   <String fx:value="text_search" />
                   <String fx:value="text_input" />
@@ -78,7 +78,7 @@
                <font>
                   <Font name="Poppins SemiBold" size="14.0" />
                </font></Button>
-            <Label layoutX="20.0" layoutY="502.0" text="Ceo Salary">
+            <Label layoutX="20.0" layoutY="502.0" text="Code">
                <font>
                   <Font name="Poppins SemiBold" size="14.0" />
                </font></Label>

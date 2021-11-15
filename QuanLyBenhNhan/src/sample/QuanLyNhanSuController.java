@@ -165,7 +165,7 @@ public class QuanLyNhanSuController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Xác Nhận");
         alert.setHeaderText("THÊM");
-        alert.setContentText("Bạn có chắc chắn muốn thêm nhân viên này ?");
+        alert.setContentText("Bạn có chắc chắn muốn thêm bệnh nhân này ?");
         ButtonType buttonTypeYes = new ButtonType("Yes",ButtonBar.ButtonData.YES);
         ButtonType buttonTypeNo = new ButtonType("No",ButtonBar.ButtonData.NO);
         ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
@@ -198,7 +198,7 @@ public class QuanLyNhanSuController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Xác Nhận");
         alert.setHeaderText("SỬA");
-        alert.setContentText("Bạn có chắc chắn muốn sửa nhân viên này ?");
+        alert.setContentText("Bạn có chắc chắn muốn sửa bệnh nhân này ?");
         ButtonType buttonTypeYes = new ButtonType("Yes",ButtonBar.ButtonData.YES);
         ButtonType buttonTypeNo = new ButtonType("No",ButtonBar.ButtonData.NO);
         ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
@@ -242,7 +242,7 @@ public class QuanLyNhanSuController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Xác Nhận");
         alert.setHeaderText("XÓA");
-        alert.setContentText("Bạn có chắc chắn muốn xóa nhân viên này ?");
+        alert.setContentText("Bạn có chắc chắn muốn xóa bệnh nhân này ?");
         ButtonType buttonTypeYes = new ButtonType("Yes",ButtonBar.ButtonData.YES);
         ButtonType buttonTypeNo = new ButtonType("No",ButtonBar.ButtonData.NO);
         ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
