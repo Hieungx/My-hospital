@@ -22,8 +22,8 @@
       </Button>
       <TableView fx:id="table" layoutY="126.0" onMouseClicked="#handleClickTableView" prefHeight="402.0" prefWidth="702.0">
         <columns>
-          <TableColumn fx:id="positionColumn" prefWidth="371.14582020044327" text="Position" />
-          <TableColumn fx:id="ceo_salaryColumn" prefWidth="358.85418701171875" text="Ceo Salary" />
+          <TableColumn fx:id="positionColumn" prefWidth="371.14582020044327" text="Type" />
+          <TableColumn fx:id="ceo_salaryColumn" prefWidth="358.85418701171875" text="Code" />
         </columns>
       </TableView>
       <Label layoutX="27.0" layoutY="75.0" text="Type">

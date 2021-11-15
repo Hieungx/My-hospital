@@ -1,1 +1,3 @@
 A,BN0001,Nguyen Phu Tai,12,Male,213321312,,Ha Noi,Nặng,1.0
+A,BN0002,Nguyen Minh Tri,31,Femal,21332,,Linh Dam,Trung Bình,3.0
+A,BN0003,Linh Ngoc Anh,22,Male,23123123,,Hong Phuoc,Nhẹ,2.0
