@@ -80,7 +80,7 @@ public class ManagementPositionController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Xác Nhận");
         alert.setHeaderText("THÊM");
-        alert.setContentText("Bạn có chắc chắn muốn thêm chức vụ này ?");
+        alert.setContentText("Bạn có chắc chắn muốn thêm tình trạng này này ?");
         ButtonType buttonTypeYes = new ButtonType("Yes",ButtonBar.ButtonData.YES);
         ButtonType buttonTypeNo = new ButtonType("No",ButtonBar.ButtonData.NO);
         ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
@@ -104,7 +104,7 @@ public class ManagementPositionController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Xác Nhận");
         alert.setHeaderText("SỬA");
-        alert.setContentText("Bạn có chắc chắn muốn sửa chức vụ này ?");
+        alert.setContentText("Bạn có chắc chắn muốn sửa tình trạng này ?");
         ButtonType buttonTypeYes = new ButtonType("Yes",ButtonBar.ButtonData.YES);
         ButtonType buttonTypeNo = new ButtonType("No",ButtonBar.ButtonData.NO);
         ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
@@ -150,7 +150,7 @@ public class ManagementPositionController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Xác Nhận");
         alert.setHeaderText("XÓA");
-        alert.setContentText("Bạn có chắc chắn muốn xóa chức vụ này ?");
+        alert.setContentText("Bạn có chắc chắn muốn xóa tình trạng này ?");
         ButtonType buttonTypeYes = new ButtonType("Yes",ButtonBar.ButtonData.YES);
         ButtonType buttonTypeNo = new ButtonType("No",ButtonBar.ButtonData.NO);
         ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);

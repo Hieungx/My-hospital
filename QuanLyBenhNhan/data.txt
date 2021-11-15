@@ -1,6 +1,1 @@
-A,A32692,Trịnh Văn Trường,16,Nam,0366662673,truong@gmail.com,Hà Nam,Giám đốc,10.0
-A,A33886,Trần Thu Hà,19,Nữ,0174628374,ha@gmail.com,Quảng Ninh,Thư ký,8.7
-A,A32339,Ngô Trung Sơn,20,Nam,0186674723,son@gmail.com,Hà Nội,Quản lý,8.0
-B,A33857,Bùi Thanh Bình,20,Nam,0218748718,binh@gmail.com,Hải Dương,Giám đốc,10.0
-B,A33062,Nghê Quyết Tiến,20,Nam,018247126,tien@gmail.com,Hà Nam,Thư ký,8.7
-C,A33333,Nguyễn Văn C,19,Nam,01827467261,C@gmail.com,Hà Nội,Bảo vệ,4.0
+A,BN0001,Nguyen Phu Tai,12,Male,213321312,,Ha Noi,Nặng,1.0
