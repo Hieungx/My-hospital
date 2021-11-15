@@ -36,12 +36,12 @@
                   </Text>
                </children>
             </Pane>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="241.0" styleClass="bnt_nav" text="Branch">
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="241.0" styleClass="bnt_nav" text="PHÒNG ĐIỀU TRỊ">
                <font>
                   <Font name="Poppins ExtraBold" size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#ChangeScenePosition" prefHeight="27.0" prefWidth="245.0" styleClass="bnt_nav" text="Management Posotion">
+            <Button mnemonicParsing="false" onAction="#ChangeScenePosition" prefHeight="27.0" prefWidth="245.0" styleClass="bnt_nav" text="PHÂN CẤP BỆNH NHÂN">
                <font>
                   <Font name="Poppins ExtraBold" size="14.0" />
                </font>
@@ -58,7 +58,7 @@
             <Font name="Poppins Medium" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="250.0" layoutY="163.0" mnemonicParsing="false" onAction="#BranchA" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Branch A" textFill="#42526e">
+      <Button layoutX="250.0" layoutY="163.0" mnemonicParsing="false" onAction="#BranchA" prefHeight="143.0" prefWidth="221.0" styleClass="bnt_branch" text="Phòng A" textFill="#42526e">
          <font>
             <Font name="Poppins Medium" size="16.0" />
          </font>
